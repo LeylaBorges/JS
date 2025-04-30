@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <h1>
+        Json
+    </h1>
+    <h2>
+        JSON = javascriptObject Notation
+        <br>
+        Utilizado para comunicação entre serviços, ex: back end <->front end.
+        <br>
+        Basicamente um tipo de dado padronizado, que lembra muitos objetos de js.
+    </h2>
+    
+</body>
+<script>
+    let pessoa = {
+        "nome" : "Leyla",
+        "idade" : 37 
+    }
+
+    console.log(pessoa.nome);
+    console.log(pessoa.idade);
+
+
+    let pessoa2 = {
+        "nome": "Leyla",
+        "idade" : 37,
+        "profissão" : "Programador",
+        "hobbies" : ["Video game" , "Leitura", "Correr"]
+    }
+    let pessoaTexto = JSON.stringify(pessoa);
+
+    console.log(pessoaTexto);
+    //console.log(pessoaTexto.nome);
+
+    let pessoaJSON = JSON.parse(pessoaTexto);
+
+    console.log(pessoaJSON);
+
+    console.log(pessoaJSON.hobbies[0]);
+</script>
+</html>
